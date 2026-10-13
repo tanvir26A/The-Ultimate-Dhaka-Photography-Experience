@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F8FAFC">
+<title>Ultimate Dhaka Photography Experience — Insignia Tours & Travel</title>
+<meta name="description" content="A day-long photo story of Dhaka in eight chapters — from dawn wholesale markets to the shipyards across the Buriganga. For international photographers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%231F2B5B' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3.5' fill='%230284C7'/%3E%3C/svg%3E">
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF2F7; --card:#FFFFFF; --tint:#F1F5F9;
+  --ink:#1F2B5B; --navy:#1F2B5B; --text:#3B4A63; --muted:#64748B; --faint:#94A3B8;
+  --sky:#38BDF8; --sky-deep:#0284C7; --blue:#3B82F6;
+  --line:#E2E8F0; --line2:#CBD5E1;
+  --amber-bg:#FFFBEB; --amber-line:#FDE68A; --amber-ink:#92400E;
+  --emerald:#059669;
+  --fd:'Fraunces',serif; --fp:'Newsreader',serif; --fb:'Archivo',sans-serif; --fm:'JetBrains Mono',monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--text);font:400 15.5px/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+::selection{background:var(--sky);color:#0B1B45}
+img{max-width:100%;display:block}
+.ic{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+html.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+html.js [data-reveal].in{opacity:1;transform:none}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--sky-deep);z-index:100;transition:width .1s linear}
+
+/* ============ HERO (full-screen cover) ============ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.55) 0%,rgba(15,23,42,.62) 55%,rgba(15,23,42,.78) 100%)}
+.hero-c{position:relative;z-index:2;max-width:860px;padding:0 24px;color:#fff}
+/* LOGO — majhkhane, white chip-er moddhe */
+.hero-logo{display:inline-flex;margin-bottom:34px}
+.hero-logo img{height:90px;width:auto;display:block}
+.hero h1{font:600 clamp(2.5rem,5.8vw,4.3rem)/1.07 var(--fd);letter-spacing:-.015em;color:#fff;margin:0 0 18px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--sky)}
+.hero .deck{font:400 18px/1.7 var(--fp);color:rgba(235,241,249,.88);max-width:640px;margin:0 auto}
+.hero-meta{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:9px 0;margin-top:34px;padding:15px 28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);border-radius:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 34px -18px rgba(0,0,0,.5)}
+.hero-meta span{font:600 10px var(--fm);letter-spacing:.2em;color:#fff;padding:0 20px;border-left:1px solid rgba(255,255,255,.28)}
+.hero-meta span:first-child{border-left:0}
+.hero-meta span b{color:var(--sky);font-weight:600}
+.hero-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.75);text-decoration:none;font:600 8.5px var(--fm);letter-spacing:.3em;transition:color .25s}
+.hero-scroll:hover{color:#fff}
+.hero-scroll .ic{animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+
+/* ============ SHEET SYSTEM ============ */
+.sheets{display:flex;flex-direction:column;gap:8px;padding:34px 0 10px}
+.sep{display:flex;justify-content:center;align-items:center;height:36px}
+.sep::before,.sep::after{content:"";width:90px;height:1px;background:var(--line2)}
+.sep i{width:7px;height:7px;background:var(--line2);transform:rotate(45deg);margin:0 14px;flex:none}
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px -46px rgba(31,43,91,.45);padding:clamp(28px,4.5vw,52px) clamp(22px,4vw,50px) clamp(24px,3.5vw,40px);scroll-margin-top:24px}
+/* prottek sheet-er upore plain logo — kono style nai, shudhu chobi */
+.sheet-logo{display:block;height:55px;width:auto;margin:0 0 22px auto}
+.turnrow{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;border-top:1px solid var(--line);margin-top:36px;padding-top:20px}
+.turnrow a{text-decoration:none;display:flex;flex-direction:column;gap:4px;max-width:300px;min-width:0}
+.turnrow a.next{justify-self:end;text-align:right}
+.turnrow .k{font:600 9px var(--fm);letter-spacing:.24em;color:var(--faint)}
+.turnrow .t{font:600 clamp(15px,2vw,18px)/1.25 var(--fd);color:var(--ink);transition:color .2s}
+.turnrow a:hover .t{color:var(--sky-deep)}
+.turn-orn{position:relative;justify-self:center;width:9px;height:9px;background:var(--line2);transform:rotate(45deg);flex:none}
+
+/* ============ HERITAGE TRAIL PROMO (page footer) ============ */
+.promo{margin-top:20px;border:1px solid rgba(2,132,199,.3);background:linear-gradient(120deg,#F0F9FF 0%,#EFF4FF 100%);border-radius:14px;padding:20px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.promo-txt{flex:1 1 260px;min-width:240px}
+.promo-txt .k{font:600 9px var(--fm);letter-spacing:.24em;color:var(--sky-deep)}
+.promo-txt h3{font:600 1.3rem var(--fd);color:var(--ink);margin:6px 0 5px;letter-spacing:-.01em}
+.promo-txt h3 a{color:inherit;text-decoration:none;transition:color .2s}
+.promo-txt h3 a:hover{color:var(--sky-deep)}
+.promo-txt p{font:400 14px/1.6 var(--fp);color:var(--muted)}
+.promo-shots{display:flex;gap:10px}
+.promo-shots a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 26px -18px rgba(31,43,91,.5)}
+.promo-shots img{width:92px;height:68px;object-fit:cover;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.promo-shots a:hover img{transform:scale(1.1)}
+.promo .btn{flex:none}
+
+.p-kick{display:flex;align-items:center;gap:14px;font:600 10.5px var(--fm);letter-spacing:.28em;color:var(--sky-deep)}
+.p-kick::before{content:"";width:30px;height:1px;background:var(--sky-deep)}
+.p-title{font:600 clamp(2rem,3.6vw,2.7rem)/1.12 var(--fd);color:var(--ink);letter-spacing:-.01em;margin:.45em 0 .3em}
+.p-title em{font-style:italic;font-weight:500;color:var(--sky-deep)}
+.p-sub{font:400 16.5px/1.7 var(--fp);color:var(--muted);max-width:640px}
+
+/* story sheet — justified prose */
+.pro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;margin-top:38px;align-items:start}
+.prose{font:400 17px/1.8 var(--fp);color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.prose p+p{margin-top:1.2em}
+.prose .lead-p::first-letter{font:600 3.6em/0.85 var(--fd);color:var(--ink);float:left;padding:8px 12px 0 0}
+.facts{background:var(--tint);border:1px solid var(--line);border-radius:16px;padding:26px}
+.facts h3{font:600 10.5px var(--fm);letter-spacing:.24em;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.facts h3::after{content:"";flex:1;height:1px;background:var(--line2)}
+.fact{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.fact:last-of-type{border:0}
+.fic{width:34px;height:34px;border-radius:10px;background:rgba(56,189,248,.12);color:var(--sky-deep);display:flex;align-items:center;justify-content:center;flex:none}
+.fact b{display:block;font:700 14px var(--fb);color:var(--ink)}
+.fact span{font-size:13px;color:var(--muted)}
+.dnote{display:flex;gap:10px;align-items:flex-start;border:1px solid;border-radius:10px;padding:13px 15px;font-size:13.5px;line-height:1.55}
+.dnote .ic{margin-top:2px}
+.dnote.warn{border-color:var(--amber-line);background:var(--amber-bg);color:var(--amber-ink)}
+.dnote.warn .ic{color:#D97706}
+.fact .sched{margin-top:14px;border:0;padding:14px 16px;border-radius:12px}
+.fact .sched p{font-size:13.5px;line-height:1.55}
+.fact .sched b{font-size:13.5px}
+
+/* contents sheet */
+.fbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:30px 0 10px}
+.fchips{display:flex;gap:8px;flex-wrap:wrap}
+.fchip{border:1px solid var(--line2);border-radius:999px;background:var(--card);color:var(--muted);font:600 10px var(--fm);letter-spacing:.12em;padding:9px 15px;cursor:pointer;transition:.25s}
+.fchip b{font-weight:500;opacity:.6;margin-left:5px}
+.fchip:hover{border-color:var(--sky-deep);color:var(--ink)}
+.fchip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.fchip.active b{opacity:.65}
+.fcount{font:500 10px var(--fm);letter-spacing:.14em;color:var(--muted)}
+.toc-list{list-style:none;background:var(--tint);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.tocrow{display:grid;grid-template-columns:46px 10px 1fr auto 22px;align-items:center;gap:14px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:16px 22px;cursor:pointer;font-family:var(--fb);transition:background .2s}
+.toc-list li:last-child .tocrow{border-bottom:0}
+.tocrow:hover{background:#fff}
+.tocrow.hide{display:none}
+.t-num{font:600 13px var(--fm);color:var(--faint)}
+.t-dot{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.t-name{display:block;font:600 17px var(--fd);color:var(--ink);transition:color .2s}
+.tocrow:hover .t-name{color:var(--sky-deep)}
+.t-focus{display:block;font:400 13px var(--fp);font-style:italic;color:var(--muted);margin-top:2px}
+.t-time{font:500 10.5px var(--fm);letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+.tocrow>.ic{color:var(--line2)}
+.tocrow:hover>.ic{color:var(--sky-deep)}
+
+/* ============ CHAPTER SHEETS ============ */
+.chap-head{position:relative}
+.chap-num{position:absolute;right:-8px;top:-24px;font:600 clamp(90px,13vw,150px)/0.9 var(--fd);color:rgba(31,43,91,.06);pointer-events:none;user-select:none}
+.ch-eyebrow{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px}
+.ch-num{font:700 11.5px var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--c)}
+.ch-time{font:500 10.5px var(--fm);letter-spacing:.12em;color:var(--muted)}
+.ch-name{font:600 clamp(1.8rem,4vw,2.6rem)/1.08 var(--fd);color:var(--ink);margin-top:10px;letter-spacing:-.012em;max-width:760px}
+.ch-focus{font:400 15.5px var(--fp);font-style:italic;color:var(--muted);margin-top:6px}
+.chap-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;margin-top:26px}
+.ch-right{display:flex;flex-direction:column}
+.ch-p{font:400 16px/1.78 var(--fp);color:var(--text)}
+.ch-p+p{margin-top:1em}
+
+/* --- chapter slideshow --- */
+.ss{margin:0;display:flex;flex-direction:column;flex:1}
+.ss-frame{position:relative;flex:1;min-height:380px;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 44px -34px rgba(31,43,91,.5);background:var(--tint);user-select:none;-webkit-user-select:none}
+.ss-frame .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease;-webkit-user-drag:none}
+.ss-frame .slide.on{opacity:1;animation:kb 4.8s ease-out forwards}
+@keyframes kb{from{transform:scale(1.045)}to{transform:scale(1)}}
+.ss-cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:28px 14px 10px;background:linear-gradient(180deg,transparent,rgba(11,23,42,.65));color:#fff;font:500 10px var(--fm);letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+.ss-cap .cap{opacity:.95}
+.ss-nav{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -10px rgba(11,23,42,.5);opacity:0;transition:opacity .25s,transform .2s;z-index:2}
+.ss-prev{left:10px}.ss-next{right:10px}
+.ss-frame:hover .ss-nav{opacity:1}
+.ss-nav:hover{transform:translateY(-50%) scale(1.08)}
+@media(hover:none){.ss-nav{opacity:.9}}
+.ss-ctrl{display:flex;align-items:center;gap:12px;margin-top:10px}
+.ss-dots{display:flex;gap:7px}
+.ss-dots button{width:8px;height:8px;border-radius:50%;border:0;background:var(--line2);cursor:pointer;padding:0;transition:background .25s,transform .25s}
+.ss-dots button.on{background:var(--sky-deep);transform:scale(1.3)}
+.ss-prog{flex:1;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.ss-prog i{display:block;height:100%;width:0;background:var(--sky-deep)}
+.ss-prog i.run{animation:fill var(--dur,4200ms) linear forwards}
+@keyframes fill{from{width:0}to{width:100%}}
+.ss.paused .slide.on{animation-play-state:paused}
+.ss.paused .ss-prog i.run{animation-play-state:paused}
+.ss figcaption{font:500 9px var(--fm);letter-spacing:.16em;color:var(--faint);margin-top:8px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.ch-note{margin-top:16px;background:#F0F9FF;border:1px solid rgba(56,189,248,.35);border-left:3px solid var(--sky);border-radius:0 12px 12px 0;padding:13px 15px}
+.note-label{display:flex;align-items:center;gap:8px;font:700 9.5px var(--fm);letter-spacing:.22em;color:var(--sky-deep);margin-bottom:7px}
+.ch-note p{font:400 14px/1.6 var(--fp);color:#1E3A5F}
+.chfacts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--tint);margin-top:16px}
+.chfacts>div{padding:11px 13px;border-left:1px solid var(--line)}
+.chfacts>div:first-child{border-left:0}
+.chfacts span{display:block;font:600 8.5px var(--fm);letter-spacing:.2em;color:var(--faint);margin-bottom:4px}
+.chfacts b{font:700 12.5px var(--fb);color:var(--ink)}
+.ch-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;font:700 9px var(--fm);letter-spacing:.14em;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:999px;padding:6px 12px}
+.chip.grn{color:#047857;border-color:rgba(5,150,105,.35);background:#ECFDF5}
+.chip.amb{color:#B45309;border-color:rgba(180,83,9,.3);background:#FFF7ED}
+
+/* ============ PRACTICAL SHEET ============ */
+.ledger{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:20px;margin-top:38px}
+.lcol{background:var(--tint);border:1px solid var(--line);border-radius:16px;padding:26px}
+.lcol h3{display:flex;align-items:center;gap:9px;font:700 10.5px var(--fm);letter-spacing:.22em;color:var(--sky-deep);margin-bottom:18px}
+.lcol.pick h3{color:var(--navy)}
+.lcol.inc{border-top:3px solid var(--sky-deep)}
+.lcol.pick{border-top:3px solid var(--navy)}
+.lcol.excl h3{color:var(--muted)}
+.lcol ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.lcol li{display:flex;gap:13px;align-items:flex-start;font:400 15px/1.6 var(--fp);color:var(--text)}
+.lcol li b{font-family:var(--fb);font-weight:700;color:var(--ink)}
+.lic{flex:none;width:21px;height:21px;border-radius:7px;display:flex;align-items:center;justify-content:center;margin-top:2px;background:#fff;border:1px solid var(--line)}
+.pick .lic{color:var(--navy)}
+.inc .lic{color:var(--sky-deep)}
+.excl .lic{color:var(--faint)}
+.excl li{color:var(--muted)}
+.pick .subnote{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font:400 13.5px/1.6 var(--fp);font-style:italic;color:var(--muted)}
+
+/* ============ COMMITMENT SHEET ============ */
+.eth-single{max-width:680px;margin:36px auto 0;text-align:center}
+.eth-single .n{font:500 13px var(--fm);letter-spacing:.16em;color:var(--sky-deep)}
+.eth-single h3{font:600 1.7rem var(--fd);color:var(--ink);margin-top:10px;letter-spacing:-.01em}
+.eth-single p{font:400 16.5px/1.8 var(--fp);color:var(--muted);margin-top:12px}
+.eth-single .eic{width:46px;height:46px;border:1px solid var(--line);border-radius:13px;background:var(--tint);display:inline-flex;align-items:center;justify-content:center;color:var(--sky-deep);margin-bottom:16px}
+.eth-photos{margin-top:44px}
+.eth-photos .ph-label{display:flex;align-items:center;gap:14px;font:600 9.5px var(--fm);letter-spacing:.24em;color:var(--faint);margin-bottom:16px}
+.eth-photos .ph-label::before,.eth-photos .ph-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.ph-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ph{margin:0}
+.ph .imgw{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 16px 38px -30px rgba(31,43,91,.5)}
+.ph img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.05)}
+.ph figcaption{font:500 9px var(--fm);letter-spacing:.16em;color:var(--faint);margin-top:9px;text-align:center;text-transform:uppercase}
+
+/* side page-dots */
+.dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:65;display:flex;flex-direction:column;gap:11px}
+.dots button{position:relative;width:10px;height:10px;border-radius:50%;border:0;background:var(--line2);cursor:pointer;padding:0;transition:background .25s,transform .25s}
+.dots button.on{background:var(--sky-deep);transform:scale(1.3)}
+.dots button::after{content:attr(data-label);position:absolute;right:22px;top:50%;transform:translateY(-50%);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 11px;font:600 10px var(--fm);letter-spacing:.08em;color:var(--ink);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 12px 30px -16px rgba(31,43,91,.4)}
+.dots button:hover::after{opacity:1}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;text-decoration:none;font:700 14px var(--fb);border-radius:999px;padding:13px 24px;transition:transform .2s,background .25s,border-color .25s}
+.btn:active{transform:translateY(1px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#2B3C82;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--sky-deep);border:1.5px solid var(--line2)}
+.btn-ghost:hover{border-color:var(--sky-deep);background:rgba(56,189,248,.07)}
+
+/* responsive */
+@media(max-width:1240px){.dots{display:none}}
+@media(max-width:1020px){
+  .pro-grid{grid-template-columns:1fr}
+  .ledger{grid-template-columns:1fr}
+  .chap-grid{display:flex;flex-direction:column;gap:18px}
+  .ch-left,.ch-right{display:contents}
+  .ch-story{order:1}
+  .ss{order:2}
+  .ss-frame{aspect-ratio:3/2;flex:none;min-height:0}
+  .ch-note{order:3}
+  .chfacts{order:4}
+  .ch-chips{order:5}
+  .chap-num{top:-14px}
+}
+@media(max-width:680px){
+  .tocrow{grid-template-columns:36px 8px 1fr auto;padding:14px 14px}
+  .tocrow>.ic{display:none}
+  .turnrow{grid-template-columns:1fr 1fr}
+  .turn-orn{display:none}
+  .sheet{border-radius:14px}
+  .ph-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-meta{padding:12px 18px;gap:8px 0}
+  .hero-meta span{padding:0 12px;font-size:8.5px}
+  .promo{flex-direction:column;align-items:flex-start;gap:16px}
+  .promo-shots img{width:76px;height:58px}
+  .sheet-logo{height:34px;margin-bottom:16px}
+  .hero-logo img{height:56px}
+  .hero-logo{padding:11px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  html.js [data-reveal]{opacity:1;transform:none}
+  .ss-prog{display:none}
+}
+</style>
+</head>
+<body id="top">
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M22 12h-4M6 12H2M12 6V2M12 22v-4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v4M10 1v4M14 1v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-aleft" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-aright" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+</svg>
+
+<div id="progress"></div>
+
+<!-- ============ HERO · FULL-SCREEN COVER ============ -->
+<header class="hero" id="cover">
+  <img class="hero-bg" src="https://picsum.photos/seed/dhaka-buriganga-dawn/1800/1100.jpg" alt="">
+  <div class="hero-tint" aria-hidden="true"></div>
+  <div class="hero-c">
+    <!-- ══ APNAR LOGO — MAJHKHANE ══
+         Logo image ta ei file-er same folder-e "insignia-logo.png" nam-e rakhun.
+         Onno naam hole nichei src change kore din. -->
+    <div class="hero-logo" data-reveal>
+      <img src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+    </div>
+    <h1 data-reveal>The Ultimate <em>Dhaka</em><br>Photography Experience</h1>
+    <p class="deck" data-reveal>A day-long story in eight chapters for visiting photographers — from dawn wholesale markets and a modernist railway cathedral to the shipyards across the Buriganga.</p>
+    <p class="hero-meta" data-reveal>
+      <span>6–8 HOURS</span><span>STARTS <b>08:00</b></span><span>AGES 0–120</span><span>FREE CANCELLATION UP TO 24 H</span>
+    </p>
+  </div>
+  <a class="hero-scroll" href="#story" aria-label="Scroll to the story">
+    <span>SCROLL</span>
+    <svg class="ic" width="16" height="16"><use href="#i-down"/></svg>
+  </a>
+</header>
+
+<nav class="dots" id="dots" aria-label="Page navigation"></nav>
+
+<main class="sheets" id="sheets">
+
+<!-- ============ SHEET · THE STORY ============ -->
+<section class="sheet" id="story" data-label="The Story">
+  <img class="sheet-logo" src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+  <header>
+    <p class="p-kick">PROLOGUE</p>
+    <h1 class="p-title" data-reveal>The story <em>begins.</em></h1>
+  </header>
+  <div class="pro-grid">
+    <div class="prose" data-reveal>
+      <p class="lead-p">Dhaka does not wake so much as it ignites. By 1610 this city on the Buriganga was a Mughal capital; its muslin once dressed emperors, and today some twenty million stories crowd its lanes — every one of them a photograph waiting for the right pair of eyes. This day is built for those eyes.</p>
+      <p>You will be collected at eight, while the wholesale markets are at their loudest, and returned by late afternoon with memory cards heavy from a city that never once stopped performing. In between lie eight chapters: a modernist railway cathedral from the 1960s, a lane that supplies the city's every celebration, the indigo-scented stacks of a book bazaar, the Mughal-era alleys of the old city and its proudest biriyani, a street of conch-shell artisans, one of the busiest river ports on earth — and, across the water, hulls the size of buildings.</p>
+      <p>Everything is arranged. All that remains is for you to turn the first page.</p>
+    </div>
+    <aside class="facts" data-reveal style="transition-delay:.08s">
+      <h3>AT A GLANCE</h3>
+      <div class="fact"><span class="fic"><svg class="ic" width="15" height="15"><use href="#i-clock"/></svg></span><span><b>6–8 hours, door to door</b><span>Eight stops, timed from an 08:00 start to roughly 16:00.</span></span></div>
+      <div class="fact"><span class="fic"><svg class="ic" width="15" height="15"><use href="#i-cal"/></svg></span><span><b>Starts at 08:00</b><span>Pickup anywhere within Dhaka Metropolitan City.</span></span></div>
+      <div class="fact"><span class="fic"><svg class="ic" width="15" height="15"><use href="#i-users"/></svg></span><span><b>All ages, 0–120</b><span>Infant seats on request; service animals welcome.</span></span></div>
+      <div class="fact"><span class="fic"><svg class="ic" width="15" height="15"><use href="#i-shield"/></svg></span><span><b>Free cancellation</b><span>Full refund up to 24 hours before the start time.</span></span></div>
+      <div class="fact"><div class="dnote warn sched"><svg class="ic" width="15" height="15"><use href="#i-alert"/></svg><p><b>Best days:</b> avoid Fridays and government holidays for maximum market activity. Festival-based customisation available.</p></div></div>
+    </aside>
+  </div>
+  <div class="turnrow">
+    <a href="#cover"><span class="k">← PREVIOUS PAGE</span><span class="t">Cover</span></a>
+    <span class="turn-orn" aria-hidden="true"></span>
+    <a class="next" href="#contents"><span class="k">TURN THE PAGE</span><span class="t">Contents ↓</span></a>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><i></i></div>
+
+<!-- ============ SHEET · CONTENTS ============ -->
+<section class="sheet" id="contents" data-label="Contents">
+  <img class="sheet-logo" src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+  <header>
+    <p class="p-kick">TABLE OF CONTENTS</p>
+    <h1 class="p-title" data-reveal>The day, <em>page by page.</em></h1>
+    <p class="p-sub" data-reveal>Eight chapters, one day. Filter by the photography you came for — every place below turns to its own chapter page.</p>
+  </header>
+
+  <div class="fbar" data-reveal>
+    <div class="fchips" id="fchips"></div>
+    <p class="fcount" id="fcount"></p>
+  </div>
+
+  <ol class="toc-list" id="tocList" data-reveal></ol>
+
+  <div class="turnrow">
+    <a href="#story"><span class="k">← PREVIOUS PAGE</span><span class="t">The Story</span></a>
+    <span class="turn-orn" aria-hidden="true"></span>
+    <a class="next" href="#ch1"><span class="k">TURN THE PAGE</span><span class="t">Chapter I ↓</span></a>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><i></i></div>
+
+<!-- chapter sheets injected here by JS -->
+<div id="chapterSheets"></div>
+
+<div class="sep" aria-hidden="true"><i></i></div>
+
+<!-- ============ SHEET · PRACTICAL ============ -->
+<section class="sheet" id="practical" data-label="Practical Pages">
+  <img class="sheet-logo" src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+  <header>
+    <p class="p-kick">THE PRACTICAL PAGES</p>
+    <h1 class="p-title" data-reveal>Where the day <em>collects you.</em></h1>
+    <p class="p-sub" data-reveal>The day begins at your door. Below: where we pick you up, what the journey carries, and what you bring yourself.</p>
+  </header>
+
+  <div class="ledger" data-reveal>
+    <div class="lcol pick">
+      <h3><svg class="ic" width="14" height="14"><use href="#i-pin"/></svg>WHERE WE COLLECT YOU</h3>
+      <ul>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-pin"/></svg></span><span><b>Hotel / residence</b> — anywhere in Dhaka Metropolitan City.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-pin"/></svg></span><span><b>Zia International Airport</b></span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-pin"/></svg></span><span><b>Sadarghat Launch Terminal</b></span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-pin"/></svg></span><span><b>TSC, University of Dhaka</b></span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-pin"/></svg></span><span><b>Science Lab — New Market rickshaw lane</b></span></li>
+      </ul>
+      <p class="subnote">Pickup time is confirmed with your guide the evening before the tour.</p>
+    </div>
+    <div class="lcol inc">
+      <h3><svg class="ic" width="14" height="14"><use href="#i-check"/></svg>WOVEN INTO THE DAY — INCLUDED</h3>
+      <ul>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>Hotel or residence pickup</b> anywhere within Dhaka Metropolitan City.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>A professional photography guide</b> who knows every lane in this story.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>All local transport</b> — rickshaw, CNG, boat and private vehicle.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>Local subject assistance</b> — help approaching and speaking with the people you photograph.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>Lunch &amp; snacks</b> — the traditional Old Dhaka biriyani of Chapter V, plus street-side refuels.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-check"/></svg></span><span><b>All entrance fees</b> — Kamalapur and Sadarghat admissions included.</span></li>
+      </ul>
+    </div>
+    <div class="lcol excl">
+      <h3><svg class="ic" width="14" height="14"><use href="#i-x"/></svg>WHAT TO BRING YOURSELF</h3>
+      <ul>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-x"/></svg></span><span><b>Personal photography equipment</b> — your own kit, your own eye.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-x"/></svg></span><span><b>Personal expenses</b> beyond the set itinerary.</span></li>
+        <li><span class="lic"><svg class="ic" width="12" height="12"><use href="#i-x"/></svg></span><span><b>Tips &amp; gratuities</b> for guides, drivers and boatmen.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="turnrow">
+    <a href="#ch8"><span class="k">← PREVIOUS PAGE</span><span class="t">Chapter VIII — Ananda Shipyard</span></a>
+    <span class="turn-orn" aria-hidden="true"></span>
+    <a class="next" href="#commitment"><span class="k">TURN THE PAGE</span><span class="t">Our Commitment ↓</span></a>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><i></i></div>
+
+<!-- ============ SHEET · COMMITMENT (final page) ============ -->
+<section class="sheet" id="commitment" data-label="Our Commitment">
+  <img class="sheet-logo" src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+  <header>
+    <p class="p-kick">THE WAY WE TRAVEL</p>
+    <h1 class="p-title" data-reveal>Ethical by <em>default.</em></h1>
+  </header>
+
+  <div class="eth-single" data-reveal>
+    <span class="eic"><svg class="ic" width="20" height="20"><use href="#i-shield"/></svg></span>
+    <span class="n">OUR ONE PRINCIPLE</span>
+    <h3>Ethical subject interaction</h3>
+    <p>Your photography guide is a working fixer: they open conversations, translate consent, and make sure every frame is made with permission and respect — especially with market workers, artisans and children. A photograph here is a relationship, not a transaction.</p>
+  </div>
+
+  <div class="eth-photos" data-reveal>
+    <p class="ph-label">FOUR FRAMES OF RESPECT</p>
+    <div class="ph-grid">
+      <figure class="ph">
+        <div class="imgw"><img src="https://picsum.photos/seed/ethics-artisan-hands/560/420.jpg" alt="An artisan at work — indicative frame" loading="lazy"></div>
+        <figcaption>Ask first, frame second</figcaption>
+      </figure>
+      <figure class="ph">
+        <div class="imgw"><img src="https://picsum.photos/seed/ethics-vendor-smile/560/420.jpg" alt="A market vendor — indicative frame" loading="lazy"></div>
+        <figcaption>The craft comes first</figcaption>
+      </figure>
+      <figure class="ph">
+        <div class="imgw"><img src="https://picsum.photos/seed/ethics-guide-talk/560/420.jpg" alt="A guide in conversation — indicative frame" loading="lazy"></div>
+        <figcaption>Your guide opens the door</figcaption>
+      </figure>
+      <figure class="ph">
+        <div class="imgw"><img src="https://picsum.photos/seed/ethics-river-life/560/420.jpg" alt="River workers — indicative frame" loading="lazy"></div>
+        <figcaption>Consent in every frame</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="turnrow">
+    <a href="#practical"><span class="k">← PREVIOUS PAGE</span><span class="t">The Practical Pages</span></a>
+    <span class="turn-orn" aria-hidden="true"></span>
+    <a class="next" href="#cover"><span class="k">END OF THE JOURNEY</span><span class="t">Back to the cover ↑</span></a>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+'use strict';
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const pad=n=>String(n).padStart(2,'0');
+const fmt=m=>pad(Math.floor(m/60)%24)+':'+pad(m%60);
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ================= DATA ================= */
+const ROMAN=['I','II','III','IV','V','VI','VII','VIII'];
+const CATL={street:'Street',architecture:'Architecture',portraits:'Portraits',industrial:'Industrial'};
+const CATC={street:'#0891B2',architecture:'#2563EB',portraits:'#DB2777',industrial:'#B45309'};
+const CATS=['street','architecture','portraits','industrial'];
+const T0=480;
+
+/* ══ HERITAGE TRAIL PROMO — apnar booking page-er URL ekhane bosan ══ */
+const PROMO_URL='https://www.insigniatours.example/old-dhaka-heritage-trail';
+
+const STOPS=[
+ {name:'Kawran Bazar',mins:90,cats:['street'],phase:'First light',
+  focus:'Wholesale market · street & documentary photography',
+  shots:[
+   {seed:'kawran-bazar-dawn',cap:'The morning shift arrives'},
+   {seed:'kawran-ice-porters',cap:'Ice carriers between the crates'},
+   {seed:'kawran-tea-stove',cap:'Tea stoves at first light'}],
+  story:[
+   `The day begins where the city's appetite does. Before sunrise the porters of Kawran Bazar are already running — baskets of radishes balanced on their heads, blocks of ice riding their shoulders, tea stoves flaring between the crates. Dhaka's largest wholesale market has traded on this ground for generations, and at eight in the morning it is at full gallop: every handshake a negotiation, every puddle a mirror.`,
+   `This is street and documentary photography at its most kinetic — unposed, unpolished and utterly alive. Your guide clears the way and the small courtesies: here, a smile and a nod are your entry ticket.`],
+  note:`Best for early-morning candid life and chaotic market action shots — arrive with the morning shift. A 35mm or wider at hip height works beautifully inside the crowd; ask before close portraits.`},
+ {name:'Kamalapur Railway Station',mins:60,cats:['architecture'],phase:'Morning',admission:true,
+  focus:'Iconic railway architecture · admission included',
+  shots:[
+   {seed:'kamalapur-station',cap:'The modernist shell, late 1960s'},
+   {seed:'kamalapur-arches',cap:'Arches receding into glare'},
+   {seed:'kamalapur-porter',cap:'Porters on the move'}],
+  story:[
+   `A short ride north, and the noise of the market gives way to a different kind of thunder — the deep, scheduled kind. Kamalapur, opened in the late 1960s, remains the largest railway station in the country: a great modernist shell of repeating bays and wide platforms, where shafts of light fall like timetables kept.`,
+   `Trains still breathe out for Chattogram, Sylhet and Rajshahi. Porters weave the aisles with luggage riding their heads, and the architecture does half of your composing for you — arch after arch receding into the glare.`],
+  note:`Wide-angle lens recommended for structural leading lines. Set the camera on the platform's centre-line and let the rhythm of the arches stack into the frame.`},
+ {name:'Shahbag Flower Market',mins:30,cats:['portraits','street'],phase:'Late morning',
+  focus:'Colourful flower market scenes & portraits',
+  shots:[
+   {seed:'shahbag-flowers',cap:'Marigold by the bucketful'},
+   {seed:'shahbag-garland',cap:'Stringing for the evening weddings'},
+   {seed:'shahbag-portrait',cap:'Faces of the flower lane'}],
+  story:[
+   `Colour returns in a single lane. The flower market at Shahbag supplies the city's every celebration — weddings, pujas, political processions — and by late morning the garland-makers are still stringing: marigold by the bucketful, roses, tuberose, ribbons of jasmine.`,
+   `Shahbag itself is one of Dhaka's historic crossroads, a place where students have gathered for generations. Between the flowers and the faces, your shutter will not rest.`],
+  note:`Macro and portrait lenses for vibrant floral close-ups. The vendors are famously camera-friendly — a raised hand and a smile buys you all the frames you need.`},
+ {name:'Nilkhet Book Market',mins:30,cats:['street'],phase:'Late morning',
+  focus:'Old book stalls, narrow lanes & market life',
+  shots:[
+   {seed:'nilkhet-books',cap:'Towers of paper'},
+   {seed:'nilkhet-reader',cap:'A reader deep in the stacks'},
+   {seed:'nilkhet-light',cap:'Light in shafts between stalls'}],
+  story:[
+   `The name remembers an older trade — nil khet, the indigo field — but today Nilkhet trades in paper. Second-hand books rise in towers to the tarpaulins: forgotten novels, exam guides, battered histories of the very streets you are walking.`,
+   `It is dim, dusty and wonderful. Readers perch on wooden stools deep in the stacks, and the light arrives in shafts, behaving like a subject in its own right.`],
+  note:`A low-light street setup: a fast prime (f/1.8–f/2), an ISO you are not afraid of, and patience for the shafts of light between the stalls.`},
+ {name:'Nazira Bazar, Old Dhaka',mins:90,cats:['street','portraits'],phase:'Midday',lunch:true,
+  focus:'Narrow alleys, vibrant food streets & traditional Old Dhaka biriyani lunch',
+  shots:[
+   {seed:'nazira-bazar-lunch',cap:'Spice smoke in the alleys'},
+   {seed:'nazira-griddle',cap:'The griddles never rest'},
+   {seed:'nazira-biriyani',cap:'Kacchi, slow-cooked overnight'}],
+  story:[
+   `Now cross into the old city, where the Mughals kept their capital and the lanes have not widened since. Nazira Bazar folds you into spice smoke and sizzling griddles; the alleys narrow until the sky is a ribbon overhead.`,
+   `Then, lunch — the Old Dhaka biriyani this journey is quietly famous for, served from kitchens whose recipes are guarded the way other families guard jewellery. Kacchi biriyani, marinated overnight and cooked over slow fire: the most photogenic plate in Bangladesh.`],
+  note:`Cultural street-food shots and culinary lifestyle frames. Ask before close-ups of the kacchi pots — flame and steam read best from just outside the light.`},
+ {name:'Shankhari Bazar Road',mins:30,cats:['portraits','architecture'],phase:'Early afternoon',
+  focus:'Historic Hindu artisan street & traditional craftsmanship',
+  shots:[
+   {seed:'shankhari-bazar',cap:'The street of conch shells'},
+   {seed:'shankhari-hands',cap:'Hands that outlived empires'},
+   {seed:'shankhari-facade',cap:'Townhouses leaning overhead'}],
+  story:[
+   `One of the oldest streets in the old city, named for the shankha — the conch-shell bangle worn by Bengali Hindu brides. In the workshops of Shankhari Bazar, artisans still cut, carve and polish the white shells by hand, a craft that has outlived every empire that rose above it.`,
+   `The townhouses lean together overhead in deep greens and faded reds; the street below is all hands, tools and concentration.`],
+  note:`Artisan portrait photography at working height. Your guide opens the conversation, so the craft comes first and the camera second.`},
+ {name:'Sadarghat Launch Terminal',mins:30,cats:['street'],phase:'Early afternoon',admission:true,
+  focus:'Riverfront action & launch terminal life · admission included',
+  shots:[
+   {seed:'sadarghat-river',cap:'The Buriganga at full voice'},
+   {seed:'sadarghat-gangway',cap:'Deckhands under cargo'},
+   {seed:'sadarghat-crossing',cap:'Engine boats crossing wakes'}],
+  story:[
+   `The Buriganga — the river that gave the city its reason — at full voice. Sadarghat is one of the busiest river ports on earth: deckhands hauling gangways under cargo, engine boats crossing each other's wakes, ferries breathing crowds in and out.`,
+   `Everything here is reflection, spray and glare. It is loud, chaotic and, from the waterline, endlessly generous.`],
+  note:`High-contrast river-life shots. Work the waterline for backlit silhouettes against the water glare — and keep an eye on your step.`},
+ {name:'Ananda Shipyard and Slipways Ltd',mins:120,cats:['industrial'],phase:'Afternoon',
+  focus:'Dramatic ship repairing yards of Keraniganj',
+  shots:[
+   {seed:'keraniganj-shipyard',cap:'Hulls the size of buildings'},
+   {seed:'keraniganj-welder',cap:'Sparks from the catwalks'},
+   {seed:'keraniganj-silhouette',cap:'Scale, in silhouette'}],
+  story:[
+   `The last chapter is the largest. Cross the river to Keraniganj, where hulls the size of buildings stand propped on the slipways of Ananda Shipyard and Slipways — welders' sparks raining from catwalks, cutting torches writing their own light.`,
+   `Bangladesh's shipbuilding heritage runs as deep as its rivers; here you photograph it at scale — rivets, rust and human figures dwarfed into punctuation. Two unhurried hours, and a final frame worthy of them.`],
+  note:`Industrial photography at its most cinematic: silhouettes against torch light, long-lens compression for sheer scale. Access zones are fixed — your guide knows the lines.`}
+];
+const times=(()=>{let a=T0;return STOPS.map(s=>{const st=a;a+=s.mins;return{st,en:a}})})();
+
+/* ================= CHAPTER SHEETS =================
+   LEFT:  story → photographer's note → facts → chips
+   RIGHT: slideshow only — stretches to match the left column height  */
+ $('#chapterSheets').innerHTML=STOPS.map((s,i)=>{
+  const c=CATC[s.cats[0]], num=ROMAN[i];
+  const prevId=i===0?'contents':'ch'+i, nextId=i===7?'practical':'ch'+(i+2);
+  const prevT=i===0?'Contents':'Chapter '+ROMAN[i-1]+' — '+STOPS[i-1].name.split(',')[0];
+  const nextT=i===7?'The Practical Pages':'Chapter '+ROMAN[i+1]+' — '+STOPS[i+1].name.split(',')[0];
+  return `
+  <section class="sheet" id="ch${i+1}" data-label="Ch. ${num} · ${s.name.split(',')[0]}">
+    <img class="sheet-logo" src="insignia-logo.png" alt="Insignia Tours Bangladesh">
+    <header class="chap-head">
+      <span class="chap-num" aria-hidden="true">${num}</span>
+      <p class="ch-eyebrow" data-reveal>
+        <span class="ch-num" style="--c:${c}">Chapter ${num}</span>
+        <span class="ch-time">${fmt(times[i].st)} — ${fmt(times[i].en)} · ${s.mins} MINUTES · ${s.phase.toUpperCase()}</span>
+      </p>
+      <h1 class="ch-name" data-reveal>${s.name}</h1>
+      <p class="ch-focus" data-reveal>${s.focus}</p>
+    </header>
+    <div class="chap-grid">
+      <div class="ch-left">
+        <div class="ch-story" data-reveal>${s.story.map(p=>`<p class="ch-p">${p}</p>`).join('')}</div>
+        <div class="ch-note" data-reveal>
+          <span class="note-label"><svg class="ic" width="12" height="12"><use href="#i-cross"/></svg>PHOTOGRAPHER'S NOTE</span>
+          <p>${s.note}</p>
+        </div>
+        <div class="chfacts" data-reveal>
+          <div><span>STARTS</span><b>${fmt(times[i].st)}</b></div>
+          <div><span>ON LOCATION</span><b>${s.mins} MIN</b></div>
+          <div><span>GENRE</span><b>${s.cats.map(cc=>CATL[cc]).join(' · ')}</b></div>
+        </div>
+        <div class="ch-chips" data-reveal>
+          ${s.cats.map(cc=>`<span class="chip" style="--c:${CATC[cc]}">${CATL[cc].toUpperCase()}</span>`).join('')}
+          ${s.admission?'<span class="chip grn"><svg class="ic" width="11" height="11"><use href="#i-check"/></svg>ADMISSION INCLUDED</span>':''}
+          ${s.lunch?'<span class="chip amb"><svg class="ic" width="11" height="11"><use href="#i-coffee"/></svg>OLD DHAKA BIRIYANI LUNCH</span>':''}
+        </div>
+      </div>
+      <aside class="ch-right" data-reveal>
+        <figure class="ss" data-caps='${JSON.stringify(s.shots.map(x=>x.cap))}'>
+          <div class="ss-frame">
+            ${s.shots.map((x,k)=>`<img class="slide${k===0?' on':''}" src="https://picsum.photos/seed/${x.seed}/900/700.jpg" alt="${x.cap} — ${s.name} (indicative frame)" loading="lazy">`).join('')}
+            <div class="ss-cap"><span class="cap">${s.shots[0].cap}</span><span class="ss-count">01 / ${pad(s.shots.length)}</span></div>
+            <button type="button" class="ss-nav ss-prev" aria-label="Previous photograph"><svg class="ic" width="15" height="15"><use href="#i-aleft"/></svg></button>
+            <button type="button" class="ss-nav ss-next" aria-label="Next photograph"><svg class="ic" width="15" height="15"><use href="#i-aright"/></svg></button>
+          </div>
+          <div class="ss-ctrl">
+            <div class="ss-dots">${s.shots.map((x,k)=>`<button type="button" class="${k===0?'on':''}" aria-label="Photograph ${k+1}"></button>`).join('')}</div>
+            <div class="ss-prog"><i style="--dur:4200ms"></i></div>
+          </div>
+          <figcaption><span>CHAPTER ${num} · SLIDESHOW · ${s.shots.length} FRAMES</span><span>CHANGES EVERY 4 SECONDS · HOVER TO PAUSE</span></figcaption>
+        </figure>
+      </aside>
+    </div>
+    <div class="turnrow">
+      <a href="#${prevId}"><span class="k">← PREVIOUS PAGE</span><span class="t">${prevT}</span></a>
+      <span class="turn-orn" aria-hidden="true"></span>
+      <a class="next" href="#${nextId}"><span class="k">TURN THE PAGE</span><span class="t">${nextT} ↓</span></a>
+    </div>
+  </section>
+  ${i<7?'<div class="sep" aria-hidden="true"><i></i></div>':''}`;
+}).join('');
+
+/* ================= HERITAGE TRAIL PROMO — every page's footer (Story → Commitment) ================= */
+const promo=document.createElement('aside');
+promo.className='promo';
+promo.innerHTML=`
+  <div class="promo-txt">
+    <p class="k">MORE FROM INSIGNIA</p>
+    <h3><a href="${PROMO_URL}" target="_blank" rel="noopener">Old Dhaka Heritage Trail</a></h3>
+    <p>Loved the old city? Walk its full heritage loop — Ahsan Manzil, the Armenian Church, Shankhari Bazar's artisan lanes and the riverfront at dusk — with a storyteller guide.</p>
+  </div>
+  <div class="promo-shots">
+    <a href="${PROMO_URL}" target="_blank" rel="noopener" aria-label="Ahsan Manzil — view the Heritage Trail">
+      <img src="https://picsum.photos/seed/heritage-ahsan-manzil/260/190.jpg" alt="Ahsan Manzil — indicative frame" loading="lazy">
+    </a>
+    <a href="${PROMO_URL}" target="_blank" rel="noopener" aria-label="Armenian Church — view the Heritage Trail">
+      <img src="https://picsum.photos/seed/heritage-armenian-church/260/190.jpg" alt="Armenian Church, Old Dhaka — indicative frame" loading="lazy">
+    </a>
+    <a href="${PROMO_URL}" target="_blank" rel="noopener" aria-label="Old Dhaka riverfront — view the Heritage Trail">
+      <img src="https://picsum.photos/seed/heritage-riverfront-dusk/260/190.jpg" alt="Old Dhaka riverfront at dusk — indicative frame" loading="lazy">
+    </a>
+  </div>
+  <a class="btn btn-navy" href="${PROMO_URL}" target="_blank" rel="noopener">Book the Trail <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>`;
+/* hero (cover) chara sob sheet-er sheshe boshiye dao */
+ $$('.sheet').forEach(sh=>sh.appendChild(promo.cloneNode(true)));
+
+/* ================= CHAPTER SLIDESHOWS ================= */
+const SLIDE_MS=4200;
+const ssStates=[];
+function startSS(st){
+  if(reduced||st.timer||!st.visible||st.hovered)return;
+  if(st.bar){st.bar.classList.remove('run');void st.bar.offsetWidth;st.bar.classList.add('run')}
+  st.timer=setInterval(()=>showSS(st,st.cur+1),SLIDE_MS);
+}
+function stopSS(st){if(st.timer){clearInterval(st.timer);st.timer=null}}
+function showSS(st,n){
+  const L=st.slides.length;
+  st.cur=(n+L)%L;
+  st.slides.forEach((s,i)=>s.classList.toggle('on',i===st.cur));
+  st.dots.forEach((d,i)=>d.classList.toggle('on',i===st.cur));
+  st.cap.textContent=st.caps[st.cur]||'';
+  st.count.textContent=pad(st.cur+1)+' / '+pad(L);
+  if(st.bar&&!reduced&&st.visible){st.bar.classList.remove('run');void st.bar.offsetWidth;st.bar.classList.add('run')}
+}
+const ssIO=new IntersectionObserver(es=>es.forEach(e=>{
+  const st=ssStates[+e.target.dataset.ss]; if(!st)return;
+  st.visible=e.isIntersecting;
+  if(st.visible)startSS(st);
+  else{stopSS(st);if(st.bar)st.bar.classList.remove('run')}
+}),{rootMargin:'120px'});
+ $$('.ss').forEach((ss,idx)=>{
+  const st={
+    slides:$$('.slide',ss),dots:$$('.ss-dots button',ss),
+    cap:$('.ss-cap .cap',ss),count:$('.ss-cap .ss-count',ss),
+    bar:$('.ss-prog i',ss),frame:$('.ss-frame',ss),
+    caps:JSON.parse(ss.dataset.caps||'[]'),
+    cur:0,timer:null,hovered:false,visible:false
+  };
+  ss.dataset.ss=idx;ssStates[idx]=st;
+  showSS(st,0);
+  $('.ss-prev',ss).addEventListener('click',()=>{showSS(st,st.cur-1);stopSS(st);startSS(st)});
+  $('.ss-next',ss).addEventListener('click',()=>{showSS(st,st.cur+1);stopSS(st);startSS(st)});
+  st.dots.forEach((d,i)=>d.addEventListener('click',()=>{showSS(st,i);stopSS(st);startSS(st)}));
+  st.frame.addEventListener('mouseenter',()=>{st.hovered=true;ss.classList.add('paused');stopSS(st)});
+  st.frame.addEventListener('mouseleave',()=>{st.hovered=false;ss.classList.remove('paused');startSS(st)});
+  ssIO.observe(ss);
+});
+
+/* ================= PAGE SPY: side dots ================= */
+const sheets=$$('.sheet');
+ $('#dots').innerHTML=sheets.map((sh,i)=>`<button type="button" data-i="${i}" data-label="${pad(i+1)} · ${sh.dataset.label}" aria-label="Page ${i+1}: ${sh.dataset.label}"></button>`).join('');
+const dotBtns=$$('#dots button');
+dotBtns.forEach(b=>b.addEventListener('click',()=>sheets[+b.dataset.i].scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'})));
+function setActive(i){dotBtns.forEach((b,j)=>b.classList.toggle('on',j===i))}
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting) setActive(sheets.indexOf(e.target)); });
+},{rootMargin:'-45% 0px -45% 0px'});
+sheets.forEach(s=>spy.observe(s));
+
+/* ================= CONTENTS: list + filters ================= */
+ $('#tocList').innerHTML=STOPS.map((s,i)=>`
+  <li><button type="button" class="tocrow" data-i="${i}" data-cats="${s.cats.join(' ')}" style="--c:${CATC[s.cats[0]]}">
+    <span class="t-num">${ROMAN[i]}</span>
+    <span class="t-dot" aria-hidden="true"></span>
+    <span><span class="t-name">${s.name}</span><span class="t-focus">${s.focus}</span></span>
+    <span class="t-time">${fmt(times[i].st)} · ${s.mins} MIN</span>
+    <svg class="ic" width="16" height="16"><use href="#i-arrow"/></svg>
+  </button></li>`).join('');
+ $('#tocList').addEventListener('click',e=>{
+  const b=e.target.closest('.tocrow');if(!b)return;
+  $('#ch'+(+b.dataset.i+1)).scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+});
+
+const counts={all:STOPS.length};
+CATS.forEach(c=>counts[c]=STOPS.filter(s=>s.cats.includes(c)).length);
+ $('#fchips').innerHTML=[{id:'all',label:'ALL CHAPTERS'},...CATS.map(c=>({id:c,label:CATL[c].toUpperCase()}))]
+  .map(c=>`<button type="button" class="fchip${c.id==='all'?' active':''}" data-f="${c.id}">${c.label}<b>${counts[c.id]}</b></button>`).join('');
+ $('#fchips').addEventListener('click',e=>{
+  const b=e.target.closest('.fchip');if(b)applyFilter(b.dataset.f);
+});
+function applyFilter(f){
+  let n=0,min=0;
+  $$('.tocrow').forEach(row=>{
+    const i=+row.dataset.i,ok=f==='all'||row.dataset.cats.split(' ').includes(f);
+    row.classList.toggle('hide',!ok);
+    if(ok){n++;min+=STOPS[i].mins}
+  });
+  $$('#fchips .fchip').forEach(b=>b.classList.toggle('active',b.dataset.f===f));
+  $('#fcount').textContent=`SHOWING ${n} OF 8 CHAPTERS · ${min} MIN ON LOCATION`;
+}
+applyFilter('all');
+
+/* ================= CHROME ================= */
+addEventListener('scroll',()=>{
+  const doc=document.documentElement;
+  const max=doc.scrollHeight-innerHeight;
+  $('#progress').style.width=(max>0?(scrollY/max)*100:0)+'%';
+},{passive:true});
+
+const rio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}
+}),{threshold:.1});
+ $$('[data-reveal]').forEach(el=>rio.observe(el));
+
+setActive(0);
+})();
+</script>
+</body>
+</html>
